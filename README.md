@@ -15,7 +15,7 @@ TYPEMASTER is a web-based typing speed test application designed to help users i
 ## Live Demo
 
 You can try out the application live at the following link:  
-[**TYPEMASTER Live Demo**](https://yourwebsite.com)  
+[**TYPEMASTER Live Demo**](https://mindenry.github.io/TYPEMASTER/)  
 *(Replace this link with your actual live website URL)*
 
 ## Installation
@@ -45,10 +45,6 @@ You can try out the application live at the following link:
 ## Contributing
 
 Feel free to fork this project, open issues, and submit pull requests. Contributions are welcome!
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
