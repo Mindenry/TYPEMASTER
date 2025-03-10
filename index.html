@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speed Typing Master</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Inter:wght@300;400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+  
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <i class="fas fa-keyboard"></i>
+        <h1>TYPE<span class="highlight">MASTER</span></h1>
+      </div>
+      <div class="stats-container">
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-label">WPM</div>
+            <div class="stat-value" id="wpm">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">TIME</div>
+            <div class="stat-value" id="timer">0</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">ACC</div>
+            <div class="stat-value" id="accuracy">100</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="options-panel">
+      <div class="options-header">
+        <i class="fas fa-sliders"></i>
+        <span>Test Options</span>
+      </div>
+      
+      <div class="options">
+        <div class="option-group">
+          <div class="option-label"><i class="fas fa-font"></i> Mode</div>
+          <div class="option-buttons">
+            <button class="mode-button active" data-mode="quotes">Text</button>
+            <button class="mode-button" data-mode="code">Code</button>
+          </div>
+        </div>
+        
+        <div class="option-group">
+          <div class="option-label"><i class="fas fa-language"></i> Language</div>
+          <div class="option-buttons">
+            <button class="language-button active" data-lang="english">EN</button>
+            <button class="language-button" data-lang="thai">TH</button>
+          </div>
+        </div>
+        
+        <div class="option-group">
+          <div class="option-label"><i class="fas fa-clock"></i> Time</div>
+          <div class="option-buttons">
+            <button class="time-button" data-time="30">30s</button>
+            <button class="time-button active" data-time="60">60s</button>
+            <button class="time-button" data-time="120">2m</button>
+          </div>
+        </div>
+        
+        <div class="option-group">
+          <div class="option-label"><i class="fas fa-palette"></i> Theme</div>
+          <div class="option-buttons">
+            <button class="theme-button active" data-theme="dark"><i class="fas fa-moon"></i></button>
+            <button class="theme-button" data-theme="light"><i class="fas fa-sun"></i></button>
+            <button class="theme-button" data-theme="neon"><i class="fas fa-bolt"></i></button>
+            <button class="theme-button" data-theme="matrix"><i class="fas fa-code"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="main-content">
+      <div class="quote-display-container">
+        <div class="quote-display" id="quoteDisplay"></div>
+      </div>
+      
+      <div class="input-area">
+        <textarea id="quoteInput" class="quote-input" autofocus></textarea>
+        <div class="typing-indicator">
+          <div class="typing-indicator-progress" id="progress"></div>
+        </div>
+      </div>
+      
+      <div class="accuracy-stat">
+        <div class="accuracy-item">
+          <i class="fas fa-bullseye"></i>
+          <span>Accuracy: <span class="accuracy-value" id="accuracyDetailed">100%</span></span>
+        </div>
+        <div class="accuracy-item">
+          <i class="fas fa-keyboard"></i>
+          <span>Characters: <span class="characters-value" id="characters">0/0</span></span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="typing-result" id="result">
+      <div class="result-container">
+        <div class="result-title">
+          <i class="fas fa-trophy"></i> Test Complete!
+        </div>
+        <div class="result-stats">
+          <div class="result-stat">
+            <div class="result-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <div class="result-value" id="resultWpm">0</div>
+            <div class="result-label">WPM</div>
+          </div>
+          <div class="result-stat">
+            <div class="result-icon"><i class="fas fa-bullseye"></i></div>
+            <div class="result-value" id="resultAccuracy">100%</div>
+            <div class="result-label">Accuracy</div>
+          </div>
+          <div class="result-stat">
+            <div class="result-icon"><i class="fas fa-keyboard"></i></div>
+            <div class="result-value" id="resultChars">0</div>
+            <div class="result-label">Characters</div>
+          </div>
+        </div>
+        <div class="action-buttons">
+          <button class="restart-button" id="newTest">
+            <i class="fas fa-redo"></i> New Test
+          </button>
+          <button class="share-button">
+            <i class="fas fa-share-alt"></i> Share
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="action-buttons main-actions">
+      <button class="restart-button" id="restart">
+        <i class="fas fa-redo"></i> Restart
+      </button>
+      <button class="focus-button">
+        <i class="fas fa-bullseye"></i> Focus Mode
+      </button>
+    </div>
+  </div>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
